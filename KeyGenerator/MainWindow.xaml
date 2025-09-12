@@ -20,11 +20,12 @@
             <CheckBox x:Name = "IncludeSpecial" Content="Include special characters (!@#$%)" HorizontalAlignment="Left" Margin="16,212,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.075,-0.536" Checked="IncludeSpecial_Checked" Height="20" Width="204" FontSize="10" Foreground="White" Background="#FF141414" BorderBrush="#FF434343"/>
             <TextBox x:Name = "CountTextBox" HorizontalAlignment="Left" Margin="350,567,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="73" Height="45" TextChanged="TextBox_TextChanged" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="#FF434343" Background="#FF212121"/>
             <TextBox x:Name = "FormatBoxTextBox" HorizontalAlignment="Center" Margin="0,130,0,0" TextWrapping="Wrap" Text="XXXX-XXXX-XXXX-XXXX" VerticalAlignment="Top" Width="407" Height="38" TextChanged="TextBox_TextChanged" Foreground="White" VerticalContentAlignment="Center"/>
-            <TextBlock HorizontalAlignment="Left" Margin="16,23,0,0" TextWrapping="Wrap" Text="Universal Key Generator" VerticalAlignment="Top" FontSize="15" Cursor="ArrowCD" Foreground="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="16,52,0,0" TextWrapping="Wrap" Text="Educational project for learning how key generation works." VerticalAlignment="Top" Width="271" Foreground="#FF929292"/>
-            <TextBlock HorizontalAlignment="Left" Margin="16,112,0,0" TextWrapping="Wrap" Text="Key format (XXXX-XXXX-XXXX-XXXX)" VerticalAlignment="Top" Width="271" FontSize="10" Foreground="#FF929292"/>
+            <TextBlock x:Name="LableTextBox" HorizontalAlignment="Left" Margin="16,23,0,0" TextWrapping="Wrap" Text="Universal Key Generator" VerticalAlignment="Top" FontSize="15" Cursor="ArrowCD" Foreground="White"/>
+            <TextBlock x:Name="DesriptionTextBox" HorizontalAlignment="Left" Margin="16,52,0,0" TextWrapping="Wrap" Text="Educational project for learning how key generation works." VerticalAlignment="Top" Width="271" Foreground="#FF929292"/>
+            <TextBlock HorizontalAlignment="Left" Margin="16,112,0,0" TextWrapping="Wrap" Text="Key format (XXXX-XXXX-XXXX-XXXX)" VerticalAlignment="Top" Width="182" FontSize="10" Foreground="#FF929292"/>
             <TextBlock HorizontalAlignment="Left" Margin="16,259,0,0" TextWrapping="Wrap" Text="Results" VerticalAlignment="Top" Width="271" FontSize="10" Foreground="#FF929292"/>
-            <Button Content="🗙" HorizontalAlignment="Left" Margin="398,19,0,0" VerticalAlignment="Top" Height="31" Click="Button_Click_1" Width="31" BorderBrush="#FF212121" Background="#FF212121" Foreground="#FF6B6B6B"/>
+            <Button x:Name="СloseButton" Content="🗙" HorizontalAlignment="Left" Margin="398,19,0,0" VerticalAlignment="Top" Height="31" Click="Close_Click_1" Width="31" BorderBrush="#FF212121" Background="#FF212121" Foreground="#FF6B6B6B"/>
+            <Button x:Name="MinimizeButton" Content="﹘" HorizontalAlignment="Left" Margin="356,19,0,0" VerticalAlignment="Top" Height="31" Click="Minimize_Click_1" Width="30" BorderBrush="#01212121" Background="#00212121" Foreground="#FF6B6B6B" FontSize="20"/>
         </Grid>
     </Border>
 

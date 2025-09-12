@@ -80,10 +80,10 @@ namespace KeyGenerator
                 return;
             }
 
-            string passwordFormat = FormatBoxTextBox.Text.Trim();
-            if (string.IsNullOrEmpty(passwordFormat))
+            string keyFormat = FormatBoxTextBox.Text.Trim();
+            if (string.IsNullOrEmpty(keyFormat))
             {
-                SendError("Password format cannot be empty.");
+                SendError("Key format cannot be empty.");
                 return;
             }
 
@@ -108,14 +108,35 @@ namespace KeyGenerator
 
             for (int i = 0; i < count; i++)
             {
-                PasswordResultsTextBox.Text += GeneratePassword(passwordFormat, charactersAllowed) + Environment.NewLine;
+                PasswordResultsTextBox.Text += GeneratePassword(keyFormat, charactersAllowed) + Environment.NewLine;
             }
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void Close_Click_1(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+
+        private async void MinimizeWithLoop()
+        {
+
+            // default windows minimize animation did not work, because of WindowStyle settings :( so this is custom
+
+            for (int i = 0; i <= 10; i++)
+            {
+                this.Opacity = 1 - (double)i / 10;
+                await Task.Delay(1);
+            }
+
+            this.WindowState = WindowState.Minimized;
+            this.Opacity = 1; // to return velocity
+        }
+
+        private void Minimize_Click_1(object sender, RoutedEventArgs e)
+        {
+            MinimizeWithLoop();
+        }
+
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
