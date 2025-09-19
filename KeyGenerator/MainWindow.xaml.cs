@@ -132,11 +132,23 @@ namespace KeyGenerator
             this.Opacity = 1; // to return velocity
         }
 
-        private void Minimize_Click_1(object sender, RoutedEventArgs e)
+        private void Minim_Click_1(object sender, RoutedEventArgs e)
         {
             MinimizeWithLoop();
         }
 
+        private void CopyButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!string.IsNullOrEmpty(PasswordResultsTextBox.Text))
+            {
+                Clipboard.SetText(PasswordResultsTextBox.Text);
+                MessageBox.Show("Passwords copied to clipboard!", "Copied", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                SendError("Nothing to copy.");
+            }
+        }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
